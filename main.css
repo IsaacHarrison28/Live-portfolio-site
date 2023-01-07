@@ -54,7 +54,7 @@ body{
 
 .nav-buttons ul li a{
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: clamp(16px, 5vw, 18px);
     color: var(--nav-links-color);
     font-weight: normal;
     font-family: Verdana, sans-serif;
@@ -146,7 +146,7 @@ body{
 #content-list li{
     color: var(--section-content-color);
     text-indent: 1rem;
-    font-size: clamp(12px, 5vw, 16px);
+    font-size: clamp(12px, 5vw, 15px);
 }
 
 
