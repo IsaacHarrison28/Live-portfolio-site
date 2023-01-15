@@ -5,18 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Ubuntu:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
     <title>Isaac Harrison</title>
 </head>
 <body>
     <div class="main-container">
+        <img src="images/icons/menu.png" alt="Menu" id="menu-button">
         <div class="nav-bar-container">
             <div class="nav-content-container">
                 <div class="nav-buttons">
+                   
                     <ul>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">PROJECTS</a></li>
-                        <li><a href="#">RESUME</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li class="nav-links"><a href="#section-heading">ABOUT</a></li>
+                        <li class="nav-links"><a href="#projects-section">PROJECTS</a></li>
+                        <li class="nav-links"><a href="#">RESUME</a></li>
+                        <li class="nav-links"><a href="#">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -26,51 +31,88 @@
                 <h2>ISAAC HARRISON</h2>
                 <h5>FRONT END WEB DEVELOPER</h5>
                 <div class="social-media-icons">
-                    <!-- need to include my social media icons -->
+                    <a href="https://www.linkedin.com/in/isaac-harrison-bb0199219/"><img src="images/icons/linkedin.png" alt="Linkedin"></a>
+                    <a href="https://twitter.com/IsaacHarrisonT?s=20&t=yP8-9rjCLJ1W3ZlqE-PNhA"> <img src="images/icons/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/isaacharrison28/"><img src="images/icons/instagram.png" alt="Instagram"></a>
+                    <a href="https://github.com/IsaacHarrison28/"><img src="images/icons/github-logo.png" alt="GitHub"></a>
+               
                 </div>
            </div> 
            <div class="about-section">
                 <h4 id="section-heading">ABOUT ME</h4>
                 <p id="section-content">
-                    I am Isaac Harrison Tembo, a Zambian born front end developer with so much passion for transforming 
-                    ideas into visual realities using relevant technologies for the project among which may include HTML, 
-                    CSS, SASS, Bootstrap, JavaScript and React JS front end technologies.<br/>
-                    I have a strong passion for making contributions to the development of the web via collaborations and 
-                    contributions with other developers throughout the world. It is to this view that I am open to join a 
-                    team working on a transforming product via the web.<br/>
-                    I am quite open to relocate to any location with assistance from my employer or as arranged by the team.
-                    It is my value to work in accordance with the companies procedures and development process as well as its 
-                    values to try and make a positive contribution to the attainment of the companies missions and goals.<br/>
-                    I am open for conversations in this regard.<br/>
+                    I am a front end developer with experience in JavaScript and its libraries: React and J Query as the 
+                    major front end technologies. I uphold the value of constantly learning in my quest to become a better 
+                    developer so as to increase my relevance in web technologies and effeciency in developing better web 
+                    applications.<br/> 
+                    I am willing to take up challenging projects that are focused on providing solutions to users and contribute 
+                    to the development of the web.<br/>
                     <a href="#">contact now</a> 
                 </p>
            </div>
+           
            <div class="experience">
                 <h4 id="section-heading">SKILLS</h4>
                 <p id="section-content">
-                    I have skills; both technical and soft skills as highlighted below:
                     <ul id="content-list">
-                        <h5 id="sub-heading">Technical Skills</h5>
                         <li>HTML</li>
                         <li>CSS</li>
-                        <li>Sass</li>
                         <li>React JS</li>
                         <li>JavaScript</li>
                         <li>GitHub</li>
                         <li>Git</li>
                         <li>REST API</li>
-                    </ul>
-                    <ul id="content-list">
-                        <h5 id="sub-heading">Soft Skills</h5>
-                        <li>Communication skills</li>
-                        <li>Fluent in English</li>
-                        <li>Open to learning and growing</li>
-                        <li>Contributing towards achieving set goals</li>
-                        <li>Writing skills</li>
+                        <li>J Query</li>
                     </ul>
                 </p>
+                <div class="btns">
+                    <a href="#"><button class="btn">View Resume</button></a>
+                </div>
+                
+           </div>
+           <div class="projects-section" id="projects-section">
+                <div id="section-heading">PROJECTS</div>
+                <div class="projects-container">
+                    
+
+                    <div class="project-card">
+                        <div class="image-container">
+                            <img src="images/project2.JPG" alt="Project">
+                        </div>
+                        <div class="description" id="section-content">
+                            This is a sign up form that sees to create a responsive and functional client-side validation form to see that a user 
+                            is only allowed access to sign up when all required conditions have been met.
+                            This project also is an open source project open for re-use and implements the power of the css clamp() property.
+                        </div>
+                        <div class="btns">
+                            <a href="#" id="btn-link" target="_blank"><button class="btn">View Project</button></a>
+                            <a href="#" id="btn-link" target="_blank"><button class="btn btn-outline">GitHub Repo</button></a>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card">
+                        <div class="image-container">
+                            <img src="images/project3.JPG" alt="Project">
+                        </div>
+                        <div class="description" id="section-content">
+                           This application uses the REST API <code>GET</code> method to collect data on user demand from an external API and 
+                           provides the user with the necessary information in a simplified version. The information can then be used by the user 
+                           to get notified on weather conditions of a location they are planning to visit or would like to know of.
+                        </div>
+                        <div class="btns">
+                            <a href="#" id="btn-link"><button class="btn">View Project</button></a>
+                           <a href="#" id="btn-link"> <button class="btn btn-outline">GitHub Repo</button></a>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
            </div>
         </div>
     </div>
 </body>
+<script src="js/query.js"></script>
+<script src="index.js"></script>
 </html>

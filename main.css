@@ -23,6 +23,11 @@ body{
     --background-1: rgba(255, 255, 255, 0.8);
     --background-2: rgb(238, 219, 219);
     --section-content-color: rgba(38, 44, 44, 0.8);
+    --border-radius: 2em;
+    --div-padding: 2em;
+    --heading-font-family: 'Barlow', sans-serif;
+    --section-width: 80%;
+    --content-font-size: clamp(14px, 5vw, 18px);
 }
 
 .main-container{
@@ -38,6 +43,15 @@ body{
 
 .nav-buttons{
     padding: 0.3rem;
+}
+
+#menu-button{
+    position: absolute;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    display: none;
+    top: 1rem;
 }
 
 .nav-buttons ul{
@@ -56,8 +70,8 @@ body{
     text-decoration: none;
     font-size: clamp(16px, 5vw, 18px);
     color: var(--nav-links-color);
-    font-weight: normal;
-    font-family: Verdana, sans-serif;
+    font-weight: 600;
+    font-family: 'Barlow', sans-serif;
 }
 
 .nav-buttons ul li:hover{
@@ -70,7 +84,7 @@ body{
 
 .banner{
     width: 100%;
-    height: 400px;
+    height: 80vh;
     background-color: var(--banner-background-color);
     background: linear-gradient( 68deg, var(--banner-linear-gradient-1), var(--banner-linear-gradient-2)),
                 url('images/background.jpg');
@@ -81,25 +95,48 @@ body{
 }
 
 .banner h2{
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 4rem;
     margin-bottom: 1.2rem;
     color: var(--banner-h2-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .banner h5{
-    font-size: clamp(0.8rem, 8vw, 1rem);
+    font-size: clamp(0.8rem, 5vw, 2rem);
     color: var(--banner-h5-color);
+    font-family: 'Barlow', sans-serif;
+}
+
+
+
+.social-media-icons{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.social-media-icons img{
+    width: clamp(25px, 5vw, 35px);
+    height: clamp(25px, 5vw, 35px);
+}
+
+.social-media-icons a + a{
+    margin-left: 1.6rem;
 }
 
 
 .about-section{
-    width: 70%;
+    width: var(--section-width);
     max-width: 900px;
     margin: auto;
-    margin-block: 5rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
     background: var(--background-2);
-    padding: 2.2rem;
+    padding: var(--div-padding);
     line-height: 1.4;
+    border-radius: var(--border-radius);
 }
 
 #section-heading{
@@ -108,25 +145,30 @@ body{
     font-size: 1.3rem;
     font-weight: 600;
     color: rgb(78, 68, 68);
+    font-family: var(--heading-font-family);
 }
 
 #section-content{
     color: var(--section-content-color);
-    font-size: clamp(12px, 5vw, 18px);
+    font-size: var(--content-font-size);
+    font-family: 'Varela Round', sans-serif;
 }
 
 .about-section a{
-    font-size: clamp(12px, 5vw, 18px)
+    font-size: clamp(14px, 5vw, 18px);
+    font-family: 'Varela Round', sans-serif;
 }
 
 
 .experience{
-    width: 70%;
+    width: var(--section-width);
     max-width: 900px;
     background: var(--background-1);
     margin: auto;
-    padding: 2.2rem;
+    padding: var(--div-padding);
     line-height: 1.4;
+    border-radius: var(--border-radius);
+    margin-bottom: 1em;
 }
 
 #sub-heading{
@@ -145,8 +187,127 @@ body{
 
 #content-list li{
     color: var(--section-content-color);
-    text-indent: 1rem;
-    font-size: clamp(12px, 5vw, 15px);
+    font-size: var(--content-font-size);
+    font-family: 'Varela Round', sans-serif;
+}
+
+.projects-section{
+    width: var(--section-width);
+    max-width: 900px;
+    border-radius: 2em;
+    box-shadow: 0 2px 6px 0 rgb(160, 148, 148);
+    background: var(--background-2);
+    margin: auto;
+    padding: var(--div-padding);
+}
+
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    align-items: flex-start;
+}
+
+.project-card{
+    padding: 1rem;
+    border: none;
+    border-radius: .28rem;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+.image-container{
+    overflow: hidden;
+}
+
+.image-container img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+}
+
+.description{
+    font-size: 1rem;
+    padding-top: 1rem;
+    font-weight: normal;
+}
+
+.btns{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn{
+    --color: hsl(200, 50%, 50%);
+    background: var(--color);
+    border: none;
+    color: white;
+    padding: .5em .75em;
+    font-size: .8rem;
+    border-radius: .3em;
+    cursor: pointer;
+}
+
+.btn.btn-outline{
+    background: none;
+    border: 1px solid var(--color);
+    color: var(--color);
+}
+
+#btn-link + #btn-link{
+    margin-left: .25rem;
+}
+
+
+
+
+@media screen and (max-width: 530px) {
+
+    #menu-button{
+        display: block;
+    }
+
+    .nav-bar-container{
+        border-radius: 10px;
+        width: 80vw;
+        position: absolute;
+        top: 4.5rem;
+        right: 0.8rem;
+        background: rgb(245, 235, 235);
+        display: none;
+        line-height: 2;
+    }
+
+    .nav-bar-container.active{
+        display: block;
+    }
+
+    .nav-bar-container::before{
+        content: "";
+        background: rgb(245, 235, 235);
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 1rem;
+        transform: rotate(45deg);
+        top: -6px;
+    }
+
+
+    .nav-buttons ul{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .nav-buttons ul li{
+        width: 90%;
+        text-align: center;
+    }
 }
 
 
@@ -163,12 +324,40 @@ body{
     .nav-buttons{
         padding: 0.5rem;
     }
+}
 
-    .banner{
-        height: 300px;
+@media (max-width: 580px) {
+    .banner h2{
+        font-size: 3rem;
+    } 
+}
+
+@media (max-width: 438px) {
+    .banner h2{
+        font-size: clamp(2rem, 5vw, 3.5rem);
     }
 
-    .banner h2{
-        font-size: 1.7rem;
+}
+
+@media (max-width: 330px) {
+    .body-content-container{
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .about-section,
+    .experience,
+    .projects-section{
+        width: 100%;
+        border-radius: 0px;
+        padding-inline: 10px;
+        margin-bottom: 0px;
+    }
+
+    
+
+    .projects-container{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2em;
     }
 }
