@@ -348,9 +348,9 @@ body{
     .about-section,
     .experience,
     .projects-section{
-        width: 100%;
+        width: 90%;
         border-radius: 0px;
-        padding-inline: 10px;
+        padding-inline: 1rem;
         margin-bottom: 0px;
     }
 
