@@ -171,6 +171,17 @@ body{
     margin-bottom: 1em;
 }
 
+.contact{
+    width: var(--section-width);
+    max-width: 900px;
+    background: var(--background-1);
+    margin: auto;
+    padding: var(--div-padding);
+    line-height: 1.4;
+    border-radius: var(--border-radius);
+    margin-top: 1em;  
+}
+
 #sub-heading{
     font-size: clamp(16px, 5vw, 18px);
     text-indent: 1rem;
@@ -262,8 +273,24 @@ body{
     margin-left: .25rem;
 }
 
+#email-input,
+#name,
+#message{
+    display: block;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: .5rem;
+    padding: 0.84rem;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+}
 
-
+#email-input,
+#name{
+    width: 90%;
+}
 
 @media screen and (max-width: 530px) {
 
@@ -347,12 +374,15 @@ body{
 
     .about-section,
     .experience,
-    .projects-section{
+    .projects-section,
+    .contact{
         width: 90%;
         border-radius: 0px;
         padding-inline: 1rem;
         margin-bottom: 0px;
     }
+
+ 
 
     
 
