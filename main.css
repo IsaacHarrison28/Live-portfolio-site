@@ -28,6 +28,7 @@ body{
     --heading-font-family: 'Barlow', sans-serif;
     --section-width: 80%;
     --content-font-size: clamp(14px, 5vw, 18px);
+    --success-div-background: rgb(173, 151, 151);
 }
 
 .main-container{
@@ -292,6 +293,60 @@ body{
     width: 90%;
 }
 
+#error-log{
+    margin: 1rem;
+    font-size: 0.8rem;
+    color: #ff0000;
+}
+
+.success{
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    display: none;
+}
+
+.success.active{
+    display: flex;
+}
+
+.sent-message{
+    position: absolute;
+    width: 500px;
+    background: var(--success-div-background);
+    margin-top: 1em;
+    border-radius: var(--border-radius);
+    min-width: 100px;
+    text-align: center;
+}
+
+.sent-message::before{
+    content: "";
+    background-color: var(--success-div-background);
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -10px;
+    left: 240px;
+}
+
+.sent-message > p{
+    font-size: var(--content-font-size);
+    margin-block: 1.2rem;
+    color: rgb(255, 246, 246);
+    font-family: 'Varela Round', sans-serif;
+}
+
+.footer{
+    width: 100%;
+    background: var(--nav-container-background);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media screen and (max-width: 530px) {
 
     #menu-button{
@@ -381,8 +436,6 @@ body{
         padding-inline: 1rem;
         margin-bottom: 0px;
     }
-
- 
 
     
 
