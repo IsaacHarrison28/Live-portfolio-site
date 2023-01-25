@@ -6,9 +6,6 @@ const errorMessages = document.getElementById('error-log')
 const emailField = document.getElementById('email-input') 
 const senderName = document.getElementById('name')
 const userMessage = document.getElementById('message')
-const successMessage = document.getElementsByClassName('sent-message')[0]
-const successContainer = document.getElementsByClassName('success')[0]
-const okayBtn = document.getElementById('okay-btn')
 
 
 btn.addEventListener('click', () => {
@@ -41,23 +38,8 @@ form.addEventListener('submit', (e) => {
         errorMessages.innerText = messages.join('  |  ')
     }else{
         $("#email-button").css('background', '#008000')
-        successMessage.innerHTML = "<p>Thank You. Your Message Has Been Successfully Submitted.</p>"; 
-        successContainer.classList.add('active')
     }
     
-    // {
-    //     $("#email-button").css('background', '#008000')
-    //     successMessage.innerHTML = `<p>Thank You. Your Message Has Been Successfully Submitted.</p>`;
-    // }
-
-    // if($("#email-button").css('background', '#008000')){
-    //     //success container should now display
-    //     successContainer.classList.add('active')
-    // }
-
-    // okayBtn.addEventListener('click', () => {
-    //     successContainer.classList.remove('active')
-    // })
 
 
 
@@ -66,22 +48,4 @@ form.addEventListener('submit', (e) => {
 
 })
 
-
-window.addEventListener('load', () => {
-    
-    fetch(`https://formsubmit.co/api/get-apikey/isaacharrison2808@gmail.com`,{
-        method: "GET"
-    })
-    .then(resp => resp.json())
-    .then(
-        data => console.log(data)
-    )
-
-
-    fetch(`https://formsubmit.co/api/get-submissions/67bc4b073de34cdef07d8783fc467049e932ac9ff07b3ce9fda0af768ddaac2e`,{
-        method: "GET"
-    })
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-})
 
